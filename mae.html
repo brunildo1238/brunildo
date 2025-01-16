@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Mãe!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffe8eb, #ffc0cb);
+            color: #663399;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 4em;
+            margin-top: 0;
+            margin-bottom: 30px;
+            position: relative;
+            animation: pulse 2s infinite;
+            font-family: 'Pacifico', cursive;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        p {
+            font-size: 1.3em;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .heart {
+            color: #ff69b4;
+            font-size: 7em;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            animation: beat 1s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Remove o span, já que não teremos mais a letra B */
+        .heart {
+            color: #ff69b4; /* Cor do coração original */
+        }
+
+        /* Animação modificada para aplicar a cor rosa */
+        @keyframes beat {
+            0% { transform: scale(1); color: #ff69b4; } /* Cor inicial */
+            25% { transform: scale(1.2); color: #ffc0cb; } /* Cor rosa claro */
+            50% { transform: scale(1); color: #ff69b4; } /* Volta para a cor inicial */
+            75% { transform: scale(1.2); color: #ffc0cb; } /* Cor rosa claro novamente */
+            100% { transform: scale(1); color: #ff69b4; } /* Cor inicial */
+        }
+
+        .button {
+            background: linear-gradient(135deg, #ff69b4, #d85293);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #d85293, #ff69b4);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            max-width: 450px;
+            max-height: 450px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid #ff69b4;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background-color: hsl(207, 100%, 50%);
+            opacity: 0;
+            animation: confettiFall 5s linear forwards;
+        }
+
+        @keyframes confettiFall {
+            0% {
+                opacity: 0;
+                transform: translateY(-50vh) rotate(0deg);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 40px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 3em;
+                margin-top: 30px;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+
+            .heart{
+                font-size: 5em;
+            }
+
+            .image-container img {
+                max-width: 90%;
+                max-height: 300px;
+                margin: 10px;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    <div class="container">
+        <h1>Feliz Aniversário, Mãe!</h1>
+        <div class="heart">
+            ♥  <!-- Substituí o span com o B pelo coração ♥ -->
+        </div>
+        <p>MAMÃE! Neste dia tão especial, celebramos a data do nascimento de uma grande mãe, uma boa mãe. Uma mãe que desde sempre foi uma amiga, uma mãe que desde sempre foi uma companheira e uma mentora.</p>
+        <p>Desde o instante que eu consigo me lembrar, você foi a pessoa que mais esteve presente comigo, vendo filmes, séries, jogando (de vez em nunca), sempre, desde tempos que eu mal posso me recordar, voê esteve comigo, me ajudando, me apoiando e fazendo tudo o que estava ao seu alcance para me deixar feliz.</p>
+        <p>Apesar de tudo que nós passamos em desentendimentos, discussões, e muitos maus entendidos, apesar de não passarmos mais tanto tempo juntos, quero que saiba que o meu amor por você sempre foi, é, e sempre será incondicional. Sei que ainda sou novo e ainda tenho muitas lutas para lutar, muitos desafios a vencer e muitos caminhos a trilhar, mas em nenhum deles eu vou me esquecer de quem você é pra mim, pelo contrário, em todos você e a minha família serão meu alicerce e a minha maior motivação para tentar ser melhor.</p>
+        <p>Pode não parecer, posso não demonstrar, posso não dizer, mas espero que você sempre saiba que eu te amo.</p>
+        
+        <button class="button" id="showImagesButton">FOTOS RARAS (PROVAVELMENTE AS ÚNICAS)</button>
+
+        <div class="image-container" id="imageContainer" style="display: none;">
+            <img src="em1.jpg" alt="Imagem 1" width="450">
+            <img src="em2.jpg" alt="Imagem 2" width="450">
+            <img src="em3.jpg" alt="Imagem 3" width="450">
+            <div class="button-wrapper">
+                <button class="button" id="backButton">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const showImagesButton = document.getElementById('showImagesButton');
+        const imageContainer = document.getElementById('imageContainer');
+        const backButton = document.getElementById('backButton');
+
+        showImagesButton.addEventListener('click', () => {
+            imageContainer.style.display = 'flex';
+            showImagesButton.style.display = 'none';
+            createConfetti();
+        });
+
+        backButton.addEventListener('click', () => {
+            imageContainer.style.display = 'none';
+            showImagesButton.style.display = 'block';
+        });
+
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            confettiContainer.innerHTML = '';
+
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti-piece');
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                confettiContainer.appendChild(confetti);
+            }
+        }
+    </script>
+</body>
+</html>
