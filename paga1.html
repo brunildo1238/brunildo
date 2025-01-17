@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversário, Gustavo - Modo Brawl Stars!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333;
+            color: #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 40px;
+            background-image: url('https://i.imgur.com/insira_aqui_seu_fundo_brawl_stars_escuro.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 4px #000;
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            margin-bottom: 40px;
+            border: 2px solid #777;
+        }
+
+        p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .interacoes-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .moita {
+            width: 140px;
+            height: 80px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.1s ease-in-out;
+        }
+
+        .moita:active {
+            transform: scale(0.95);
+        }
+
+        .moita::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: linear-gradient(to bottom, #388E3C, #689F38); /* Cores mais vibrantes */
+            border-radius: 20px 20px 8px 8px;
+            box-shadow: inset 0 1px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .moita::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAbUlEQVR4Xu3VwQnAMAgDQJ/8/6GuWBvgFOcwbYkDgAULSzIUgJZgoQ6wT8HQjN2DDt0hdQ8TdAzf6E+1+i+m4jQjN9ADL3Y3H/oTy0Vd3vT6X6r5tE+Z/wBkwf5nMAx30K8/i4v1+p9r9N84j/8E5/6YmH+BwADAA7x/xk/QwO4zAgGwAAAABJRU5ErkJggg==');
+            opacity: 0.7;
+            background-size: 40px 40px;
+            animation: moveLeaves 12s linear infinite;
+        }
+
+        @keyframes moveLeaves {
+            from { background-position: 0 0; }
+            to { background-position: 40px 0; }
+        }
+
+        #mensagemMoita {
+            background-color: #444;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+            margin-top: 15px;
+            display: none;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .brawler-button {
+            background-color: #ffa000;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .brawler-button:hover {
+            background-color: #ffc107;
+        }
+
+        #mensagemBrawler {
+            background-color: #666;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+            font-size: 1.1em;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #aaa;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Feliz Aniversário, Gu! (melhor amigo, GOKUZIN, meu pato no brawl) 🎉</h1>
+
+    <div class="container">
+        <p>Lembra como tudo começou?... Uma simples frase: "você joga brawl stars?" mal sabíamos que após essa frase, anos de amizade se desenvolveriam, com diversas competições, risos, gritos de raiva, apoio, e muitas outras coisas que não tenho palavras para descrever. Eu espero que esse seja um dos primeiros de mais dezenas de aniversários que passaremos juntos, pois agora, além de um amigo você se tornou meu irmão. Sendo eu uma pessoa introvertida, muito quieta, (tipo o Sheldon kkkk)nunca imaginaria que teria um amigo como você, extrovertido, divertido, leve, que sempre sabe usar as melhores palavras para me fazer rir. Que Deus te abençoe esse ano, que seus caminhos fiquem mais claros, que suas trilhas fiquem mais limpas e que você conquiste muitas coisas. parafraseando senhor dos anéis, "te conheço menos da metade que gostaria, e gosto de você menos da metade que merece." </p>
+        <p>Preparei uma surpresa escondida para você!</p>
+
+        <div class="interacoes-container">
+            <div class="moita" onclick="mostrarMensagemMoita()"></div>
+        </div>
+        <div id="mensagemMoita">🔍 Encontrou algo! Clique novamente...</div>
+
+        <p>Escolha seu Brawler para uma mensagem especial de aniversário:</p>
+        <button class="brawler-button" onclick="mostrarMensagemBrawler('Spike')">Spike</button>
+        <button class="brawler-button" onclick="mostrarMensagemBrawler('Dynamike')">Dynamike</button>
+        <button class="brawler-button" onclick="mostrarMensagemBrawler('Surge')">Surge</button>
+        <button class="brawler-button" onclick="mostrarMensagemBrawler('Rico')">Rico</button>
+        <div id="mensagemBrawler"></div>
+
+        <p>Espero que goste da homenagem, gu. ou, é melhor dizer... GOKUZIN?</p>
+    </div>
+
+    <footer>
+        Comemorando mais um ano da sua vida ao seu lado! 🎉
+    </footer>
+
+    <script>
+        let moitaClicada = false;
+
+        function mostrarMensagemMoita() {
+            var mensagemMoita = document.getElementById('mensagemMoita');
+            if (!moitaClicada) {
+                mensagemMoita.textContent = "ano passa, ano vem, E EU AINDA NÃO SEI FAZER GOLS";
+                moitaClicada = true;
+            } else {
+                
+        
+            }
+            mensagemMoita.style.display = 'block';
+            setTimeout(function() {
+                mensagemMoita.style.display = 'none';
+            }, 5000);
+        }
+
+        function mostrarMensagemBrawler(brawler) {
+            var mensagemBrawlerDiv = document.getElementById('mensagemBrawler');
+            mensagemBrawlerDiv.style.display = 'block';
+            mensagemBrawlerDiv.innerHTML = '';
+
+            if (brawler === 'Spike') {
+                mensagemBrawlerDiv.textContent = '🌵🎉 ... (...)';
+            } else if (brawler === 'Dynamike') {
+                mensagemBrawlerDiv.innerHTML = 'Dynamike: <span style="font-weight: bold;">Feliz aniversário, Gustavo!</span> Que seu dia exploda de felicidade, assim como minhas dinamites te explodiram várias vezes. byrdie, byrdie, byrdie!!! 🧨🎉 <small>(Cuidado onde pisa!)</small>';
+            } else if (brawler === 'Surge') {
+                mensagemBrawlerDiv.innerHTML = 'Surge: Nível de aniversário... <span style="color: yellow; font-weight: bold;">MAXIMIZADO!</span> Feliz aniversário, Gustavo! Que seu dia seja SUPER! Sei que no jogo eu que sou um herói, mas é você que me incentiva a ser isso. ✨';
+            } else if (brawler === 'Rico') {
+                mensagemBrawlerDiv.innerHTML = 'Rico: Que seu aniversário seja cheio de <span style="color: gold;">ricos</span> momentos, Gustavo! Que a felicidade ricocheteie em você, assim como o Bruno ricocheteou infinitos superes em incontáveis inimigos 💰';
+            }
+
+            setTimeout(function() {
+                mensagemBrawlerDiv.style.display = 'none';
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
